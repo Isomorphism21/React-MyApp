@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+
+const array = ["Prueba"];
+function ingresar(){
+    array.push(document.getElementById("input").value);
+    console.log(document.querySelector("input").value);
+    console.log(array);
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+        <input id="input" placeholder="Ingresar" type="text"/>
+        <button onClick={ingresar}>Ingresar</button>
+      </div>
+      <div>
+          {
+            array.map((element) =>
+              <p key={element}>{element}</p>
+            )
+          }
+      </div>
     </div>
   );
 }
