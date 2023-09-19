@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+main{
+  margin-left: 20px;
+}
+
+.puestoDatos{
+  display: flex;
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
+
+.puestoDatos p{
+  margin: 0;
+}
